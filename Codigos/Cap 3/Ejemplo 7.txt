@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int numPersonas, edad, sumaEdades = 0, contador = 0;
+
+    do {
+        printf("Ingrese el número de personas (debe ser al menos 1): ");
+        scanf("%d", &numPersonas);
+    } while (numPersonas < 1);
+
+    do {
+        printf("Ingrese la edad de la persona %d: ", contador + 1);
+        scanf("%d", &edad);
+        sumaEdades += edad;
+        contador++;
+    } while (contador < numPersonas);
+
+    double promedio = (double)sumaEdades / numPersonas;
+
+    printf("El promedio de edades es: %.2lf\n", promedio);
+
+    return 0;
+}

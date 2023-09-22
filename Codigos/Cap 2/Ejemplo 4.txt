@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main(void)
+{
+    float precioOriginal, nuevoPrecio;
+
+    printf("Ingrese el precio del producto: ");
+    scanf("%f", &precioOriginal);
+
+    if (precioOriginal < 1500)
+    {
+        nuevoPrecio = precioOriginal * 1.11;
+    }
+    else
+    {
+        nuevoPrecio = precioOriginal * 1.08;
+    }
+
+    printf("\nEl nuevo precio del producto es: $%.2f\n", nuevoPrecio);
+
+    return 0;
+}
